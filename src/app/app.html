@@ -1,0 +1,116 @@
+<ion-menu id="1" persistent=true [content]="content">
+<ion-content>
+  <ion-list>
+    <div>
+      <div (click)="openPage('profile')" menuClose tappable text-center class="avatar">
+        <img src="assets/icon/avatar.png" />
+      </div>
+      <h2 text-center >Ahmed</h2>
+    </div>
+    <!--  <ion-list>
+      <ion-list-header>
+        <ion-item (click)="openPage('home')" menuClose tappable no-lines>
+          <ion-icon item-start>
+            <img src="assets/icon/home.png" />
+          </ion-icon>
+          <h2>Home</h2>
+        </ion-item>
+      </ion-list-header>
+    </ion-list> -->
+    <ion-list>
+      <ion-list-header>
+        <ion-item no-lines>
+          <ion-icon item-start>
+            <img src="assets/icon/klacid.png" />
+          </ion-icon>
+          <h2> KLACID corner</h2>
+        </ion-item>
+      </ion-list-header>
+      <ion-item  (click)="openPage('guid')" menuClose tappable>
+        <ion-icon item-start>
+          <img src="assets/icon/guide.png" />
+        </ion-icon>
+        Guidelines</ion-item>
+      <ion-item  (click)="openPage('patient')" menuClose tappable>
+        <ion-icon item-start>
+          <img src="assets/icon/patients.png" />
+        </ion-icon>
+        Patient profiles</ion-item>
+      <ion-item  (click)="openPage('interactive')" menuClose tappable>
+        <ion-icon item-start>
+          <img src="assets/icon/interactive.png" />
+        </ion-icon>
+        Interactive pi</ion-item>
+      <ion-item  (click)="openPage('dose')" menuClose tappable>
+        <ion-icon item-start>
+          <img src="assets/icon/calc.png" />
+        </ion-icon>
+        Dose calculator</ion-item>
+    </ion-list>
+    <ion-list>
+      <ion-list-header>
+        <ion-item  no-lines>
+          <ion-icon item-start>
+            <img src="assets/icon/tailored.png" />
+          </ion-icon>
+         <h2> Tailored for you </h2>
+        </ion-item>
+      </ion-list-header>
+      <!-- <ion-item (click)="openPage('online')" menuClose tabbable >
+        <ion-icon item-start>
+          <img src="assets/icon/online.png" />
+        </ion-icon>
+        Online Courses/Literature</ion-item> -->
+      <ion-item (click)="openPage('search')" menuClose tappable >
+        <ion-icon item-start>
+          <img src="assets/icon/search.png" />
+        </ion-icon>
+        Refine Search Engine</ion-item>
+      <ion-item  (click)="openPage('asking')" menuClose tappable>
+        <ion-icon item-start>
+          <img src="assets/icon/asking.png" />
+        </ion-icon>
+        Asking you</ion-item>
+      <ion-item  (click)="openPage('events')" menuClose tappable>
+        <ion-icon item-start>
+          <img src="assets/icon/events.png" />
+        </ion-icon>
+        Events/Announcements</ion-item>
+      <ion-item  (click)="openPage('lounge')" menuClose tappable>
+        <ion-icon item-start>
+          <img src="assets/icon/lounge.png" />
+        </ion-icon>
+        The lounge</ion-item>
+      <!-- <ion-item (click)="openPage('medication')" menuClose tabbable >  
+        <ion-icon item-start>
+          <img src="assets/icon/medication.png" />
+        </ion-icon>
+        Medication guide</ion-item> -->
+    </ion-list>
+    <!-- <ion-list>
+      <ion-list-header >
+        <ion-item  (click)="openPage('settings')" menuClose tabbable no-lines>
+        <ion-icon item-start>
+          <img src="assets/icon/settings.png" />
+        </ion-icon>
+      <h2>  Settings </h2>
+        </ion-item>
+      </ion-list-header>
+    </ion-list> -->
+    <ion-list>
+      <ion-list-header >
+        <ion-item (click)="openPage('logout')" menuClose tappable no-lines>
+        <ion-icon item-start>
+          <img src="assets/icon/logout.png" />
+        </ion-icon>
+     <h2>   Log out </h2>
+        </ion-item>
+      </ion-list-header>
+    </ion-list>
+
+  </ion-list>
+</ion-content>
+
+</ion-menu>
+<!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>
